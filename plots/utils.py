@@ -90,7 +90,7 @@ def figure2(x_train, y_train, b, w, color='k'):
     # Dataset
     ax.scatter(x_train, y_train)
     # Predictions
-    ax.plot(x_range, yhat_range, label='Model\'s predictions', c=color, linestyle='--')
+    ax.plot(x_range, yhat_range, label='First random line', c=color, linestyle=':')
 
     # Annotations
     ax.annotate('b = {:.4f} w = {:.4f}'.format(b[0], w[0]), xy=(.2, .55), c=color)
@@ -401,7 +401,7 @@ def figure9(x_train, y_train, b, w):
     # Model's predictions for updated paramaters
     yhat_range = b + w * x_range
     # Updated predictions
-    ax.plot(x_range, yhat_range, label='Using parameters\nafter update', c='g', linestyle='--')
+    ax.plot(x_range, yhat_range, label='After updating parameters', c='g', linestyle='--')
     # Annotations
     ax.annotate('b = {:.4f} w = {:.4f}'.format(b[0], w[0]), xy=(.2, .95), c='g')
     ax.legend()
