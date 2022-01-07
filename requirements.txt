@@ -1,4 +1,4 @@
-torch
+pytorch
 numpy
 torchvision
 colorama

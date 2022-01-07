@@ -1,21 +1,16 @@
-This is a tutorial presented during a [workshop](https://www.appliedmldays.org/workshops/hands-on-pytorch-tutorial) at the Applied Machine Learning Days 2019.
+This is a tutorial to be presented during a [workshop](http://cnf.hsu.ac.ir/esla/fa/page.php?rid=91) at The 11th Seminar on Linear Algebra and its Applications 2022.
 
-## Binder
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ahug/amld-pytorch-workshop/master) 
-<br />
-
-## Google Colab
-As an alternative to Binder, you can also use [Google Colaboratory](https://colab.research.google.com), 
-though you should use Binder if possible.
+# Slides
+[Slides](https://mamintoosi.github.io/slides/topics/DL-HSU/DeepLearning-Workshop-ESLA2022.html)
 
 ### Using Google Colab
 The Google Colab notebooks are available under:
-- [1-Basics.ipynb](https://colab.research.google.com/github/ahug/amld-pytorch-workshop/blob/master/1-Basics.ipynb)
-- [2-Autograd.ipynb](https://colab.research.google.com/github/ahug/amld-pytorch-workshop/blob/master/2-Autograd.ipynb)
-- [3-Optimization.ipynb](https://colab.research.google.com/github/ahug/amld-pytorch-workshop/blob/master/3-Optimization.ipynb)
-- [4-Modules.ipynb](https://colab.research.google.com/github/ahug/amld-pytorch-workshop/blob/master/4-Modules.ipynb)
-- [5-CNN-LSTM.ipynb](https://colab.research.google.com/github/ahug/amld-pytorch-workshop/blob/master/5-CNN-LSTM.ipynb)
-- [6-Transfer-Learning.ipynb](https://colab.research.google.com/github/ahug/amld-pytorch-workshop/blob/master/6-Transfer-Learning.ipynb)
+- [1-Basics.ipynb](https://colab.research.google.com/github/mamintoosi/pytorch-workshop/blob/master/1-Basics.ipynb)
+- [2-Autograd.ipynb](https://colab.research.google.com/github/mamintoosi/pytorch-workshop/blob/master/2-Autograd.ipynb)
+- [3-Regression_Gradient_Descent.ipynb](https://colab.research.google.com/github/mamintoosi/pytorch-workshop/blob/master/3-Regression_Gradient_Descent.ipynb)
+- [4-MLP-Digit-Recog.ipynb](https://colab.research.google.com/github/mamintoosi/pytorch-workshop/blob/master/4-MLP-Digit-Recog.ipynb)
+- [5-CNN-CIFAR.ipynb](https://colab.research.google.com/github/mamintoosi/pytorch-workshop/blob/master/5-CNN-CIFAR.ipynb)
+- [6-Transfer-Learning.ipynb](https://colab.research.google.com/github/mamintoosi/pytorch-workshop/blob/master/6-Transfer-Learning.ipynb)
 
 
 In order to use Google Colab, you have to login using your Google account:
@@ -28,9 +23,9 @@ You can add GPU support on Google Colab by changing the runtime type as depicted
 <br />
 
 ## During the Workshop
-During the workshop, we _highly recommend_ to use **Binder** or **Google Colab**. 
+During the workshop, we recommend to use **Google Colab**. 
 If you want to run the notebooks again later, you can use the following setup using [Anaconda](https://www.anaconda.com/). Unfortunately, we won't have time to help you with your conda installation. 
-<br /><br /><br /><br />
+<br />
 
 ## Using conda
 If you want to run the notebooks locally, you can use `conda`. The following instructions
@@ -39,38 +34,18 @@ should work on Linux/Mac OS, Windows might require slight adaptations.
 ### Step 1: Install conda
 If you have not installed it yet, you can download it from [Anaconda (Python 3.6 version)](https://www.anaconda.com/download/#linux).
 
-Verify that it is installed by running
-```bash
-conda -V
-```
-
-Make sure your conda installation is up-to-date:
-```bash
-conda update conda
-```
-
-### Step 2: Download repository and install environment
+### Step 2: Download repository 
 Now clone the repository:
 ```bash
-git clone https://github.com/ahug/amld-pytorch-workshop.git
-cd amld-pytorch-workshop
+git clone https://github.com/mamintoosi/pytorch-workshop.git
+cd pytorch-workshop
 ```
 
-The available `conda` environments can be listed using
-```bash
-conda env list
-```
+### Step 3: Install requirements' packages
 
-Let's now create a new environment called _'amld-pytorch'_.
+Now start the Jupyter notebook by running
 ```bash
-conda env create -f environments.yml
-```
-
-
-### Step 3: Activate/Deactivate the environment
-After the environment has been created, you can **activate** it by
-```bash
-source activate amld-pytorch
+pip install -r requirements.txt
 ```
 
 Now start the Jupyter notebook by running
@@ -78,13 +53,17 @@ Now start the Jupyter notebook by running
 jupyter notebook
 ```
 
-The environment can similarly **deactivated** by
-```bash
-source deactivate
-```
-
 ## Additionnal resources:
 Check out these others tutorials and courses:
+
+<div dir="rtl">
+							امین‌طوسی، محمود (۱۳۹۹)،
+							<a href="https://math-sci.ui.ac.ir/article_25351.html">
+								کاربرد بسط تیلور در کاهش حجم شبکه‌های عصبی پیچشی برای طبقه‌بندی نقاشی‌های سبک
+								امپرسیونیسم و مینیاتور.
+							</a>
+							نشریه ریاضی و جامعه،‌ ۵ (۱)،‌ ۱-۱۶.
+</div>							 
 - Official tutorials : https://pytorch.org/tutorials/
 - PyTorch for DL (.py files): https://github.com/yunjey/pytorch-tutorial
 - PyTorch for DL (notebooks): https://github.com/yandexdataschool/Practical_DL
