@@ -32,7 +32,7 @@ If you want to run the notebooks locally, you can use `conda`. The following ins
 should work on Linux/Mac OS, Windows might require slight adaptations.
 
 ### Step 1: Install conda
-If you have not installed it yet, you can download it from [Anaconda (Python 3.6 version)](https://www.anaconda.com/download/#linux).
+If you have not installed it yet, you can download it from [Anaconda (Python version > 3.5)](https://www.anaconda.com/download).
 
 ### Step 2: Download repository 
 Now clone the repository:
