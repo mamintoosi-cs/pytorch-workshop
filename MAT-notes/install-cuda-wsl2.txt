@@ -23,7 +23,8 @@ torch.cuda.is_available()
   return torch._C._cuda_getDeviceCount() > 0
 
 
-
+جستجوی فایلهای بزرگ
+du -aBM 2>/dev/null | sort -nr | head -n 50 | more
 
 https://docs.nvidia.com/cuda/wsl-user-guide/index.html
 برای 11.4

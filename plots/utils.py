@@ -1,10 +1,41 @@
+# Modified by M. Amintoosi, 2022
+
 import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 from matplotlib.patches import Rectangle
 from matplotlib.collections import PatchCollection
 from sklearn.linear_model import LinearRegression
+import torch
 plt.style.use('fivethirtyeight')
+
+def mesh_losses(true_b, true_w, x_train, y_train):
+    # Reminder:
+    # true_b = 1
+    # true_w = 2
+
+    # we have to split the ranges in 100 evenly spaced intervals each
+    b_range = np.linspace(true_b - 3, true_b + 3, 101)
+    w_range = np.linspace(true_w - 3, true_w + 3, 101)
+    # meshgrid is a handy function that generates a grid of b and w
+    # values for all combinations
+    bs, ws = np.meshgrid(b_range, w_range)
+    # bs.shape, ws.shape
+    sample_x = x_train[0]
+    sample_yhat = bs + ws * sample_x
+    # sample_yhat.shape
+    all_predictions = np.apply_along_axis(
+        func1d=lambda x: bs + ws * x, 
+        axis=1, 
+        arr=x_train
+    )
+    # all_predictions.shape
+    all_labels = y_train.reshape(-1, 1, 1)
+    all_errors = (all_predictions - all_labels)
+    # all_errors.shape
+    all_losses = (all_errors ** 2).mean(axis=0)
+    # all_losses.shape
+    return bs, ws, all_losses
 
 
 def fit_model(x_train, y_train):
@@ -39,7 +70,7 @@ def figure1(x_train, y_train, x_val, y_val):
     ax[1].set_xlabel('x')
     ax[1].set_ylabel('y')
     ax[1].set_ylim([0, 3.1])
-    ax[1].set_title('Generated Data - Validation')
+    ax[1].set_title('Generated Data - Test')
     fig.tight_layout()
     
     return fig, ax
@@ -350,6 +381,15 @@ def figure8(b, w, bs, ws, all_losses):
 def figure9(x_train, y_train, b, w):
     # Since we updated b and w, let's regenerate the initial ones
     # That's how using a random seed is useful, for instance
+    if torch.is_tensor(x_train):
+        x_train = x_train.detach().numpy()
+    if torch.is_tensor(y_train):
+        y_train = y_train.detach().numpy()
+    if torch.is_tensor(b):
+        b = b.detach().numpy()
+    if torch.is_tensor(w):
+        w = w.detach().numpy()
+
     np.random.seed(42)
     b_initial = np.random.randn(1)
     w_initial = np.random.randn(1)
@@ -361,10 +401,10 @@ def figure9(x_train, y_train, b, w):
     # Model's predictions for updated paramaters
     yhat_range = b + w * x_range
     # Updated predictions
-    ax.plot(x_range, yhat_range, label='Using parameters\nafter one update', c='g', linestyle='--')
+    ax.plot(x_range, yhat_range, label='Using parameters\nafter update', c='g', linestyle='--')
     # Annotations
     ax.annotate('b = {:.4f} w = {:.4f}'.format(b[0], w[0]), xy=(.2, .95), c='g')
-
+    ax.legend()
     fig.tight_layout()
     return fig, ax
 
