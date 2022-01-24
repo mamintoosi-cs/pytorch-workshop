@@ -5,12 +5,12 @@ This is a tutorial to be presented during a [workshop](http://cnf.hsu.ac.ir/esla
 
 ### Using Google Colab
 The Google Colab notebooks are available under:
-- [1-Basics.ipynb](https://colab.research.google.com/github/mamintoosi/pytorch-workshop/blob/master/1-Basics.ipynb)
-- [2-Autograd.ipynb](https://colab.research.google.com/github/mamintoosi/pytorch-workshop/blob/master/2-Autograd.ipynb)
-- [3-Regression_Gradient_Descent.ipynb](https://colab.research.google.com/github/mamintoosi/pytorch-workshop/blob/master/3-Regression_Gradient_Descent.ipynb)
-- [4-MLP-Digit-Recog.ipynb](https://colab.research.google.com/github/mamintoosi/pytorch-workshop/blob/master/4-MLP-Digit-Recog.ipynb)
-- [5-CNN-CIFAR.ipynb](https://colab.research.google.com/github/mamintoosi/pytorch-workshop/blob/master/5-CNN-CIFAR.ipynb)
-- [6-Transfer-Learning.ipynb](https://colab.research.google.com/github/mamintoosi/pytorch-workshop/blob/master/6-Transfer-Learning.ipynb)
+- [1-Basics.ipynb](https://colab.research.google.com/github/mamintoosi-cs/pytorch-workshop/blob/master/1-Basics.ipynb)
+- [2-Autograd.ipynb](https://colab.research.google.com/github/mamintoosi-cs/pytorch-workshop/blob/master/2-Autograd.ipynb)
+- [3-Regression_Gradient_Descent.ipynb](https://colab.research.google.com/github/mamintoosi-cs/pytorch-workshop/blob/master/3-Regression_Gradient_Descent.ipynb)
+- [4-MLP-Digit-Recog.ipynb](https://colab.research.google.com/github/mamintoosi-cs/pytorch-workshop/blob/master/4-MLP-Digit-Recog.ipynb)
+- [5-CNN-CIFAR.ipynb](https://colab.research.google.com/github/mamintoosi-cs/pytorch-workshop/blob/master/5-CNN-CIFAR.ipynb)
+- [6-Transfer-Learning.ipynb](https://colab.research.google.com/github/mamintoosi-cs/pytorch-workshop/blob/master/6-Transfer-Learning.ipynb)
 
 
 In order to use Google Colab, you have to login using your Google account:
