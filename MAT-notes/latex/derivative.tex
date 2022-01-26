@@ -1,0 +1,32 @@
+% arara: pdflatex
+% !arara: indent: {overwrite: yes}
+\documentclass{article}
+\usepackage[demo]{graphicx}
+
+%\usepackage{xepersian}
+%\settextfont{Yas}
+
+\begin{document}
+\centering
+$$ f'(x)=\lim\limits_{\Delta x \to 0}\frac{f(x+\Delta x)-f(x)}{\Delta x}$$
+
+
+$$ f'(x)=\lim\limits_{\Delta x \to 0}\frac{f(x+\Delta x)-f(x-\Delta x)}{2\Delta x}$$
+
+if $\Delta x=1$, the weight vector (filter) will be: [-1,0,+1]
+$$2f'(x) \approx -1\times f(x-1) + 0*f(x) +1\times f(x+1)$$
+
+\vspace{5mm}
+One of the edge detection operators is Prewitt filter:
+$$
+\begin{array}{|c|c|c|}
+\hline
+	-1 & 0 & +1 \\
+	\hline
+	-1 & 0 & +1 \\
+	\hline
+	-1 & 0 & +1\\
+	\hline
+\end{array}
+$$
+\end{document} 

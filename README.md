@@ -1,3 +1,10 @@
+PyTorch Workshop
+==========
+ [![repo size](https://img.shields.io/github/repo-size/mamintoosi-cs/pytorch-workshop.svg)](https://github.com/mamintoosi-cs/pytorch-workshop/archive/master.zip)
+ [![GitHub forks](https://img.shields.io/github/forks/mamintoosi-cs/pytorch-workshop)](https://github.com/mamintoosi-cs/pytorch-workshop/network)
+[![GitHub issues](https://img.shields.io/github/issues/mamintoosi-cs/pytorch-workshop)](https://github.com/mamintoosi-cs/pytorch-workshop/issues)
+[![GitHub license](https://img.shields.io/github/license/mamintoosi-cs/pytorch-workshop)](https://github.com/mamintoosi-cs/pytorch-workshop/blob/main/LICENSE)
+
 This is a tutorial to be presented during a [workshop](http://cnf.hsu.ac.ir/esla/fa/page.php?rid=91) at The 11th Seminar on Linear Algebra and its Applications 2022.
 
 # Slides
