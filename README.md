@@ -44,7 +44,7 @@ If you have not installed it yet, you can download it from [Anaconda (Python ver
 ### Step 2: Download repository 
 Now clone the repository:
 ```bash
-git clone https://github.com/mamintoosi/pytorch-workshop.git
+git clone https://github.com/mamintoosi-cs/pytorch-workshop.git
 cd pytorch-workshop
 ```
 
