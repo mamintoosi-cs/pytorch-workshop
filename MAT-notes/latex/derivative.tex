@@ -2,6 +2,11 @@
 % !arara: indent: {overwrite: yes}
 \documentclass{article}
 \usepackage[demo]{graphicx}
+\usepackage{amsmath}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+
 
 %\usepackage{xepersian}
 %\settextfont{Yas}
@@ -10,11 +15,19 @@
 \centering
 $$ f'(x)=\lim\limits_{\Delta x \to 0}\frac{f(x+\Delta x)-f(x)}{\Delta x}$$
 
+\begin{align}
+f'(x)&=\lim\limits_{\Delta x \to 0}\frac{f(x+\Delta x)-f(x-\Delta x)}{2\Delta x}\nonumber\\
+&=\lim\limits_{\Delta x \to 0}\frac{-f(x-\Delta x)+f(x+\Delta x)}{2\Delta x}\nonumber\\
+\Rightarrow\nonumber\\
+2\Delta x f'(x) &\approx-f(x-\Delta x)+f(x+\Delta x)\nonumber
+\end{align}
 
-$$ f'(x)=\lim\limits_{\Delta x \to 0}\frac{f(x+\Delta x)-f(x-\Delta x)}{2\Delta x}$$
 
 if $\Delta x=1$, the weight vector (filter) will be: [-1,0,+1]
-$$2f'(x) \approx -1\times f(x-1) + 0*f(x) +1\times f(x+1)$$
+\begin{align}
+2f'(x) &\approx -1\times f(x-1) + 0\times f(x) +1\times f(x+1)\nonumber\\
+&=[-1,0,1]\times[f(x-1),f(x),f(x+1)]^T\nonumber
+\end{align}
 
 \vspace{5mm}
 One of the edge detection operators is Prewitt filter:
@@ -29,4 +42,17 @@ $$
 	\hline
 \end{array}
 $$
+
+\begin{algorithmic}[1]
+\Require Objective function $E(.)$ to be minimized using SGD.
+\State  Choose an initial vector of parameters $w$ and learning rate $\eta$.
+\Repeat 
+\State Randomly shuffle examples in the training set.
+\For {i=$1,\dots,n$} 
+ \State $w = w - \eta \nabla E_i(w)$
+\EndFor
+\Until{an approximate minimum is obtained.}
+\end{algorithmic}
+
+
 \end{document} 
