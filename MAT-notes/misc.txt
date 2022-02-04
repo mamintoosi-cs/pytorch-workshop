@@ -1,0 +1,21 @@
+شناسایی حالت چهره
+تصدیق هویت
+طبقه‌بندی 
+تشخیص
+شناسایی چهره
+https://supachaic.github.io/bnk48-face-recognition/
+https://github.com/supachaic/bnk48-face-recognition
+
+Facial Expression 
+Identity Verification
+ and Classification - Detection - Localization
+ 
+ https://github.com/serengil/deepface
+ 
+استفاده از تصاویر ۳ در ۴ قدیمی مثل استفاده از دوربین‌های صد سال پیش هست که باید یک دقیقه جلوشون واسته آدم 
+
+https://machinelearningmastery.com/introduction-to-deep-learning-for-face-recognition/
+
+The 2018 paper titled “Deep Face Recognition: A Survey,” provides a helpful summary of the state of face recognition research over the last nearly 30 years, highlighting the broad trend from holistic learning methods (such as Eigenfaces), to local handcrafted feature detection, to shallow learning methods, to finally deep learning methods that are currently state of the art.
+
+The holistic approaches dominated the face recognition community in the 1990s. In the early 2000s, handcrafted local descriptors became popular, and the local feature learning approach were introduced in the late 2000s. […] [shallow learning method] performance steadily improves from around 60% to above 90%, while deep learning boosts the performance to 99.80% in just three years.
