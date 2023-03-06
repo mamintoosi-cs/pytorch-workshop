@@ -19,3 +19,6 @@ https://machinelearningmastery.com/introduction-to-deep-learning-for-face-recogn
 The 2018 paper titled “Deep Face Recognition: A Survey,” provides a helpful summary of the state of face recognition research over the last nearly 30 years, highlighting the broad trend from holistic learning methods (such as Eigenfaces), to local handcrafted feature detection, to shallow learning methods, to finally deep learning methods that are currently state of the art.
 
 The holistic approaches dominated the face recognition community in the 1990s. In the early 2000s, handcrafted local descriptors became popular, and the local feature learning approach were introduced in the late 2000s. […] [shallow learning method] performance steadily improves from around 60% to above 90%, while deep learning boosts the performance to 99.80% in just three years.
+
+Softmax vs Arg max
+https://users.cs.utah.edu/~tli/posts/2019/01/blog-post-1/
