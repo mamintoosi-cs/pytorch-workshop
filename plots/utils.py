@@ -13,6 +13,8 @@ def mesh_losses(true_b, true_w, x_train, y_train):
     # Reminder:
     # true_b = 1
     # true_w = 2
+    if x_train.shape[1] == 2:
+        x_train = np.delete(x_train,0,axis=1)
 
     # we have to split the ranges in 100 evenly spaced intervals each
     b_range = np.linspace(true_b - 3, true_b + 3, 101)
@@ -40,6 +42,8 @@ def mesh_losses(true_b, true_w, x_train, y_train):
 
 def fit_model(x_train, y_train):
     # Fits a linear regression to find the actual b and w that minimize the loss
+    if x_train.shape[1] == 2:
+        x_train = np.delete(x_train,0,axis=1)
     regression = LinearRegression()
     regression.fit(x_train, y_train)
     b_minimum, w_minimum = regression.intercept_[0], regression.coef_[0][0]
@@ -60,6 +64,10 @@ def find_index(b, w, bs, ws):
 def figure1(x_train, y_train, x_val, y_val):
     fig, ax = plt.subplots(1, 2, figsize=(12, 6))
     
+    if x_train.shape[1] == 2:
+        x_train = np.delete(x_train,0,axis=1)
+        x_val = np.delete(x_val,0,axis=1)
+
     ax[0].scatter(x_train, y_train)
     ax[0].set_xlabel('x')
     ax[0].set_ylabel('y')
@@ -77,6 +85,9 @@ def figure1(x_train, y_train, x_val, y_val):
 
 
 def figure2(x_train, y_train, b, w, color='k'):
+    if x_train.shape[1] == 2:
+        x_train = np.delete(x_train,0,axis=1)
+
     # Generates evenly spaced x feature
     x_range = np.linspace(0, 1, 101)
     # Computes yhat
@@ -101,7 +112,8 @@ def figure2(x_train, y_train, b, w, color='k'):
 
 def figure3(x_train, y_train, b, w):
     fig, ax = figure2(x_train, y_train, b, w)
-    
+    if x_train.shape[1] == 2:
+        x_train = np.delete(x_train,0,axis=1)
     # First data point
     x0, y0 = x_train[0][0], y_train[0][0]
     # First data point
@@ -118,6 +130,7 @@ def figure3(x_train, y_train, b, w):
 
 
 def figure4(x_train, y_train, b, w, bs, ws, all_losses):
+
     b_minimum, w_minimum = fit_model(x_train, y_train)
     
     
@@ -166,6 +179,7 @@ def figure4(x_train, y_train, b, w, bs, ws, all_losses):
 
 
 def figure5(x_train, y_train, b, w, bs, ws, all_losses):
+
     b_minimum, w_minimum = fit_model(x_train, y_train)
 
     b_idx, w_idx, fixedb, fixedw = find_index(b, w, bs, ws)
