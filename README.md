@@ -7,6 +7,8 @@ PyTorch Workshop
 
 This is a tutorial to be presented during a [workshop](http://cnf.hsu.ac.ir/esla/fa/page.php?rid=91) at The 11th Seminar on Linear Algebra and its Applications 2022.
 
+Currrently it is used in Data Minig Course
+
 # Slides
 [Slides](https://mamintoosi.github.io/slides/topics/DL-HSU/DeepLearning-Workshop-ESLA2022.html)
 
