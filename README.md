@@ -18,6 +18,7 @@ The Google Colab notebooks are available under:
 - [2_Autograd.ipynb](https://colab.research.google.com/github/mamintoosi-cs/pytorch-workshop/blob/master/2_Autograd.ipynb)
 - [3_Regression_Gradient_Descent.ipynb](https://colab.research.google.com/github/mamintoosi-cs/pytorch-workshop/blob/master/3_Regression_Gradient_Descent.ipynb)
 - [3_1_Regression_Vectorized.ipynb](https://colab.research.google.com/github/mamintoosi-cs/pytorch-workshop/blob/master/3_1_Regression_Vectorized.ipynb)
+- [3_2_Regression_Logistc_Reg.ipynb](https://colab.research.google.com/github/mamintoosi-cs/pytorch-workshop/blob/master/3_2_Regression_Logistc_Reg.ipynb)
 - [4_MLP_Digit_Classification.ipynb](https://colab.research.google.com/github/mamintoosi-cs/pytorch-workshop/blob/master/4_MLP_Digit_Classification.ipynb)
 - [5_CNN_CIFAR.ipynb](https://colab.research.google.com/github/mamintoosi-cs/pytorch-workshop/blob/master/5_CNN_CIFAR.ipynb)
 - [6_Transfer_Learning.ipynb](https://colab.research.google.com/github/mamintoosi-cs/pytorch-workshop/blob/master/6_Transfer_Learning.ipynb)
