@@ -5,10 +5,15 @@ https://answers.microsoft.com/en-us/insider/forum/all/how-to-enable-the-windows-
 
 نصب آناکوندا
 https://gist.github.com/kauffmanes/5e74916617f9993bc3479f401dfec7da
+wget https://repo.anaconda.com/archive/Anaconda3-2023.03-1-Linux-x86_64.sh
+خطای دسترسی داد، به صورت جدا دانلود کردم
+
 
 نصب ژویتر
 https://harshityadav95.medium.com/jupyter-notebook-in-windows-subsystem-for-linux-wsl-8b46fdf0a536
 
+sudo apt update && upgrade
+sudo apt install python3 python3-pip ipython3
 sudo apt install python3-pip
 
 pip3 install jupyter
@@ -17,3 +22,16 @@ jupyter notebook --no-browser
 jupyter lab --no-browser
 
 conda install pandas scikit-learn matplotlib jupyter jupyterlab sqlalchemy seaborn pip git
+
+نصب پایتورچ با کارت گرافیک اینتل بر روی 
+WSL
+https://github.com/intel/intel-extension-for-pytorch
+با شکن جواب داد که البته ظاهرا نسخه مربوطه در ویندوز نبود و رفتم اوبونتو
+https://intel.github.io/intel-extension-for-pytorch/xpu/latest/tutorials/installation.html
+
+python -m pip install torch==1.13.0a0+git6c9b55e -f https://developer.intel.com/ipex-whl-stable-xpu
+python -m pip install torch==1.13.0a0+git6c9b55e intel_extension_for_pytorch==1.13.120+xpu -f https://developer.intel.com/ipex-whl-stable-xpu
+
+https://github.com/pytorch/xla/issues/1666
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/mahmood/anaconda3/lib
+sudo ln -s /home/mahmood/anaconda3/lib/libmkl_intel_lp64.so.1 /home/mahmood/anaconda3/lib/libmkl_intel_lp64.so.2
